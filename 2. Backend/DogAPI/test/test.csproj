@@ -11,17 +11,20 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
-    <PackageReference Include="NUnit" Version="3.8.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
     <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
     <PackageReference Include="Microsoft.Protocols.TestTools" Version="2.3.0" />
     <PackageReference Include="COM" Version="1.1.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Microsoft.Protocols.TestTools" />
     <None Remove="COM" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
+    <None Remove="NUnit" />
+    <None Remove="NUnit3TestAdapter" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Controller.UnitTest1.cs">
@@ -30,5 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DogAPI\DogAPI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
   </ItemGroup>
 </Project>

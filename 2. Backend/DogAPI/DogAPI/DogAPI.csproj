@@ -23,6 +23,7 @@
     <PackageReference Include="NUnit.Runners" Version="3.12.0" />
     <PackageReference Include="Microsoft.VisualStudio.UnitTesting" Version="11.0.50727.1" />
     <PackageReference Include="Microsoft.Protocols.TestTools" Version="2.3.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +41,7 @@
     <None Remove="NUnit.Runners" />
     <None Remove="Microsoft.VisualStudio.UnitTesting" />
     <None Remove="Microsoft.Protocols.TestTools" />
+    <None Remove="NUnit3TestAdapter" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

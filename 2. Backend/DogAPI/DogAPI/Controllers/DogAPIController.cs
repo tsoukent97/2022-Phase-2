@@ -9,13 +9,11 @@ namespace DogAPI.Controllers
     [Route("api/[controller]")]
     public class DogAPIController : ControllerBase
     {
-        private readonly ILogger<DogAPIController> logger;
 
-        public DogAPIController(ILogger<DogAPIController> _logger)
+        public DogAPIController()
         {
-            logger = _logger;
+            
         }
-
 
         // GET: api/values
         [HttpGet]
@@ -23,7 +21,6 @@ namespace DogAPI.Controllers
 
         public ActionResult <IEnumerable<DogsDTO>> GetDogs()
         {
-            logger.LogInformation("Getting all dogs");
             return Ok(DogsStore.dogList);
         }
 
@@ -38,7 +35,6 @@ namespace DogAPI.Controllers
         {
             if (id == 0)
             {
-                logger.LogError("Get dog error with Id" + id);
                 return BadRequest();
             }
             var dog = DogsStore.dogList.FirstOrDefault(u => u.Id == id);
